@@ -527,7 +527,7 @@ function CartesianChartContent<
       {FrameComponent}
       <CartesianChartProvider yScale={primaryYScale} xScale={xScale}>
         <Group clip={clipRect}>
-          <Group matrix={transformState?.transformMatrix}>
+          <Group matrix={transformState?.matrix}>
             {hasMeasuredLayoutSize && children(renderArg)}
           </Group>
         </Group>
