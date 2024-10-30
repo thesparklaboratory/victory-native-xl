@@ -493,6 +493,7 @@ function CartesianChartContent<
                     )
                   : yAxis.yTicksNormalized
               }
+              chartBounds={clipRect}
             />
           );
         })
@@ -505,6 +506,7 @@ function CartesianChartContent<
         yScale={zoom.rescaleY(primaryYScale)}
         ix={_tData.ix}
         isNumericalData={isNumericalData}
+        chartBounds={clipRect}
       />
     ) : null;
 
