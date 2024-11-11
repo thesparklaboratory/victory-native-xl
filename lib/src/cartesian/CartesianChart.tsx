@@ -493,6 +493,7 @@ function CartesianChartContent<
                       primaryTicksRescaled,
                       primaryRescaled,
                       rescaled,
+                      axis.tickCount || axis.tickValues?.length,
                     )
                   : primaryTicksRescaled
               }

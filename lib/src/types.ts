@@ -219,10 +219,10 @@ export type YAxisInputProps<
   axisSide?: YAxisSide;
   font?: SkFont | null;
   formatYLabel?: (label: RawData[YK]) => string;
-  labelColor?: string;
+  labelColor?: Color | ((tick: number, index: number) => Color);
   labelOffset?: number;
   labelPosition?: AxisLabelPosition;
-  lineColor?: Color;
+  lineColor?: Color | ((tick: number, index: number) => Color);
   lineWidth?: number;
   tickCount?: number;
   tickValues?: number[];

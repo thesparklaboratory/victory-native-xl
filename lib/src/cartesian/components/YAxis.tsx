@@ -30,7 +30,7 @@ export const YAxis = <
   const [x1 = 0, x2 = 0] = xScale.domain();
   const [_ = 0, y2 = 0] = yScale.domain();
   const fontSize = font?.getSize() ?? 0;
-  const yAxisNodes = yTicksNormalized.map((tick) => {
+  const yAxisNodes = yTicksNormalized.map((tick, index) => {
     const contentY = formatYLabel(tick as never);
     const labelWidth =
       font
@@ -53,7 +53,6 @@ export const YAxis = <
       // right, inset
       return xScale(x2) - (labelWidth + labelOffset);
     })();
-
     const canFitLabelContent = labelY > fontSize && labelY < yScale(y2);
 
     return (
@@ -63,7 +62,7 @@ export const YAxis = <
             <Line
               p1={vec(xScale(x1), yScale(tick))}
               p2={vec(xScale(x2), yScale(tick))}
-              color={lineColor}
+              color={typeof lineColor === "function" ? lineColor(tick, index) : lineColor}
               strokeWidth={lineWidth}
             >
               {linePathEffect ? linePathEffect : null}
@@ -73,7 +72,7 @@ export const YAxis = <
         {font
           ? canFitLabelContent && (
               <Text
-                color={labelColor}
+                color={typeof labelColor === "function" ? labelColor(tick, index) : labelColor}
                 text={contentY}
                 font={font}
                 y={labelY}
