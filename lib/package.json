@@ -1,11 +1,11 @@
 {
-  "name": "victory-native",
+  "name": "@sparklaboratory/victory-native",
   "version": "41.9.0",
   "private": false,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FormidableLabs/victory-native-xl",
+    "url": "https://github.com/thesparklaboratory/victory-native-xl",
     "directory": "lib"
   },
   "homepage": "https://commerce.nearform.com/open-source/victory-native",

@@ -1,5 +1,5 @@
 {
-  "name": "victory-native-xl-monorepo",
+  "name": "@sparklaboratory/victory-native-xl-monorepo",
   "private": true,
   "workspaces": [
     "lib",
