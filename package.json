@@ -10,13 +10,13 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.tsx example lib",
     "typecheck": "tsc --noEmit",
-    "build": "shx cp README.md ./lib/README.md && yarn workspace victory-native build",
-    "dev:lib": "yarn workspace victory-native dev",
+    "build": "shx cp README.md ./lib/README.md && yarn workspace @sparklaboratory/victory-native build",
+    "dev:lib": "yarn workspace @sparklaboratory/victory-native dev",
     "dev:example": "yarn workspace example start",
     "dev": "concurrently -n lib,example -c blue,green \"yarn dev:lib\" \"yarn dev:example\"",
     "dev:ios": "concurrently -n lib,example -c blue,green \"yarn dev:lib\" \"yarn dev:example --ios\"",
-    "test": "yarn workspace victory-native test",
-    "test:watch": "yarn workspace victory-native test:watch",
+    "test": "yarn workspace @sparklaboratory/victory-native test",
+    "test:watch": "yarn workspace @sparklaboratory/victory-native test:watch",
     "changeset": "changeset",
     "check:code": "yarn lint && yarn typecheck && yarn test",
     "version": "yarn changeset version && yarn install --no-frozen-lockfile"

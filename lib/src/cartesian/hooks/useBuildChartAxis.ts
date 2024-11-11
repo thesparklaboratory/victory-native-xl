@@ -68,9 +68,9 @@ export const useBuildChartAxis = <
           ? axisProp.labelOffset
           : axisProp.labelOffset.x,
       labelColor:
-        typeof axisProp.labelColor === "object" ?
-          axisProp.labelColor.x :
-          axisProp.labelColor,
+        typeof axisProp.labelColor === "object"
+          ? axisProp.labelColor.x
+          : axisProp.labelColor,
       lineWidth:
         typeof axisProp.lineWidth === "object" && "grid" in axisProp.lineWidth
           ? typeof axisProp.lineWidth.grid === "object" &&
@@ -114,9 +114,9 @@ export const useBuildChartAxis = <
             ? axisProp.labelOffset
             : axisProp.labelOffset.y,
         labelColor:
-        typeof axisProp.labelColor === "object" ?
-          axisProp.labelColor.y :
-          axisProp.labelColor,
+          typeof axisProp.labelColor === "object"
+            ? axisProp.labelColor.y
+            : axisProp.labelColor,
         lineWidth:
           typeof axisProp.lineWidth === "object" && "grid" in axisProp.lineWidth
             ? typeof axisProp.lineWidth.grid === "object" &&

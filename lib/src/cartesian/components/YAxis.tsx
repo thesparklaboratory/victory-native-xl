@@ -62,7 +62,11 @@ export const YAxis = <
             <Line
               p1={vec(xScale(x1), yScale(tick))}
               p2={vec(xScale(x2), yScale(tick))}
-              color={typeof lineColor === "function" ? lineColor(tick, index) : lineColor}
+              color={
+                typeof lineColor === "function"
+                  ? lineColor(tick, index)
+                  : lineColor
+              }
               strokeWidth={lineWidth}
             >
               {linePathEffect ? linePathEffect : null}
@@ -72,7 +76,11 @@ export const YAxis = <
         {font
           ? canFitLabelContent && (
               <Text
-                color={typeof labelColor === "function" ? labelColor(tick, index) : labelColor}
+                color={
+                  typeof labelColor === "function"
+                    ? labelColor(tick, index)
+                    : labelColor
+                }
                 text={contentY}
                 font={font}
                 y={labelY}
